@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Escola Virtual</title>
+
+        	<style>
+
+            body {
+                max-width: 550px;
+                margin: 20px auto;
+                background: white;
+                padding: 20px;
+            }
+                .matricula-container {
+                display: flex;
+                align-items: flex-start;
+                gap: 50px; /
+            }
+
+                .form-column > label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+            }
+
+                .form-column div label {
+                font-weight: normal;
+            }
+	</style>
+    
+    </head>
+
+    <body>
+        <h1>Escola Virtual</h1>
+        <h2>Formulário de Pré-Matrícula</h2>
+        <hr>
+
+        <form>
+            <fieldset>
+                <p><b>Dados Pessoais:</b></p>
+                <label for="nome">Nome do aluno:</label>
+                <input type="text" id="nome" name="nome" size="28">
+                <br><br>
+                <label for="nascimento">Data de nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento">
+                <!--Professor, sei que na imagem está de outro jeito a parte da data de nascimento, mas achei esse melhor-->
+                <br><br>
+                <label for="mae">Nome da mãe:</label>
+                <input type="text" id="mae" name="mae" size="28">
+                <br><br>
+                <label for="pai">Nome do pai:</label>
+                <input type="text" id="pai" name="pai" size="29">
+                <br><br>
+    	        <label for="telefone">Telefone:</label>
+                <label for="ddd">DDD</label>
+  		        <span>(</span>	
+                <input type="text" id="ddd" name="ddd" size="2">
+		        <span>)</span>
+                <label for="tel">Tel</label>
+                <input type="text" id="tel" name="tel" size="10">
+                <label for="ramal">Ramal</label>
+                <input type="text" id="ramal" name="ramal" size="3">   
+                <br><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" size="34">                                          
+            </fieldset>
+
+            <fieldset>
+                <p><b>Informações de Matrícula:</b></p>
+                    <div class="matricula-container">
+
+                    <div class="form-column">
+                        <label for="serie">Série:</label>
+                        <select id="serie" name="serie">
+                            <option value="pre_escolar">Pré-escolar</option>
+                            <option value="fundamental_1_5">Fundamental 1º ao 5º</option>
+                            <option value="fundamental_6_9">Fundamental 6º ao 9º</option>
+                            <option value="ensino_medio">Ensino Médio</option>
+                        </select>
+                    </div>
+
+                    <div class="form-column">
+                        <label>Turno:</label>
+                    <div>
+                        <input type="radio" id="manha" name="turno" value="MANHA">
+                        <label for="manha">Manhã</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="tarde" name="turno" value="TARDE">
+                        <label for="tarde">Tarde</label>
+                    </div>
+                    </div>
+
+                    <div class="form-column">
+                        <label>Atividades Extracurriculares:</label>
+                        <div>
+                            <input type="checkbox" id="informatica" name="atividades[]" value="INFORMATICA">
+                            <label for="informatica">Informática</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="musica" name="atividades[]" value="MUSICA">
+                            <label for="musica">Música</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="balet" name="atividades[]" value="BALET">
+                            <label for="balet">Balet</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="pintura" name="atividades[]" value="PINTURA">
+                            <label for="pintura">Pintura</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="judo" name="atividades[]" value="JUDO">
+                            <label for="judo">Judô</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="futebol" name="atividades[]" value="FUTEBOL">
+                            <label for="futebol">Futebol</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+                <br>
+                <input type="submit" value="Enviar Formulário">
+                <input type="reset" value="Limpar Campos">
+        </form>
+    </body>
+</html>
